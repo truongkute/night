@@ -59,7 +59,7 @@ const Square: React.FC<IProps> = (props) => {
       setWrong(false);
     };
   }, [val]);
-
+  console.log(correctWord);
   const status: any = Math.floor(squareIdx/5) < reduxRow && (correct ? "correct" : almost ? "almost" : wrong ? "wrong" : "");
 
   return (
