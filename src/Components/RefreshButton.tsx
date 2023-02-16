@@ -1,15 +1,13 @@
 import React from 'react';
 import "./RefreshButton.css"
-function RefreshButton() {
-  function handleRefreshClick() {
-    window.location.reload();
-  }
+const RefreshButton: React.FC = () => {
+    const handleClick = () => {
+        window.location.reload();
+    }
 
-  return (
-    <button onClick={handleRefreshClick} className={`button`}>
-      New Game
-    </button>
-  );
+    return (
+        <button id="refresh-button" onClick={handleClick}>New game</button>
+    )
 }
 
 export default RefreshButton;
